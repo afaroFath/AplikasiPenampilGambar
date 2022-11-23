@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package AplikasiPenampilGambarGUI;
 
 import java.awt.CardLayout;
@@ -16,6 +11,7 @@ public class PenampilGambarBTN extends javax.swing.JFrame {
     /**
      * Creates new form PenampilGambarBTN
      */
+    
     public PenampilGambarBTN() {
         initComponents();
     }
@@ -29,16 +25,17 @@ public class PenampilGambarBTN extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        ButtonPanel = new javax.swing.JPanel();
         JavaEE6BTN = new javax.swing.JButton();
         JavaScriptBTN = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
         ImagePanel = new javax.swing.JPanel();
+        JavaEE6LB = new javax.swing.JLabel();
         JavaScriptLB = new javax.swing.JLabel();
         BidayatulHidayahLB = new javax.swing.JLabel();
-        JavaEE6LB = new javax.swing.JLabel();
         InsectCrisisLB = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -48,6 +45,7 @@ public class PenampilGambarBTN extends javax.swing.JFrame {
                 JavaEE6BTNActionPerformed(evt);
             }
         });
+        ButtonPanel.add(JavaEE6BTN);
 
         JavaScriptBTN.setText("Java Script");
         JavaScriptBTN.addActionListener(new java.awt.event.ActionListener() {
@@ -55,6 +53,7 @@ public class PenampilGambarBTN extends javax.swing.JFrame {
                 JavaScriptBTNActionPerformed(evt);
             }
         });
+        ButtonPanel.add(JavaScriptBTN);
 
         jButton3.setText("Bidayatul Hidayah");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -62,6 +61,7 @@ public class PenampilGambarBTN extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
+        ButtonPanel.add(jButton3);
 
         jButton4.setText("Insect Crisis");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -69,23 +69,7 @@ public class PenampilGambarBTN extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-
-        ImagePanel.setLayout(new java.awt.CardLayout());
-
-        JavaScriptLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AplikasiPenampilGambarGUIBTN/foto/foto_javascript-removebg-preview.png"))); // NOI18N
-        ImagePanel.add(JavaScriptLB, "1");
-
-        BidayatulHidayahLB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BidayatulHidayahLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AplikasiPenampilGambarGUIBTN/foto/bidayatul hidayah.jpg"))); // NOI18N
-        ImagePanel.add(BidayatulHidayahLB, "2");
-
-        JavaEE6LB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        JavaEE6LB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AplikasiPenampilGambarGUIBTN/foto/javaee.jpg"))); // NOI18N
-        ImagePanel.add(JavaEE6LB, "0");
-
-        InsectCrisisLB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        InsectCrisisLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AplikasiPenampilGambarGUIBTN/foto/insectcrisis.jpg"))); // NOI18N
-        ImagePanel.add(InsectCrisisLB, "3");
+        ButtonPanel.add(jButton4);
 
         jButton5.setText("Exit");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -93,44 +77,37 @@ public class PenampilGambarBTN extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
+        ButtonPanel.add(jButton5);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(ImagePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(JavaEE6BTN)
-                        .addGap(18, 18, 18)
-                        .addComponent(JavaScriptBTN)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton3)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton4)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton5)))
-                .addContainerGap(22, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JavaEE6BTN)
-                    .addComponent(JavaScriptBTN)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4)
-                    .addComponent(jButton5))
-                .addGap(34, 34, 34)
-                .addComponent(ImagePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(33, Short.MAX_VALUE))
-        );
+        getContentPane().add(ButtonPanel, java.awt.BorderLayout.PAGE_START);
+
+        ImagePanel.setLayout(new java.awt.CardLayout());
+
+        JavaEE6LB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        JavaEE6LB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/foto/javaee.jpg"))); // NOI18N
+        ImagePanel.add(JavaEE6LB, "0");
+
+        JavaScriptLB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        JavaScriptLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/foto/foto javascript.jpg"))); // NOI18N
+        ImagePanel.add(JavaScriptLB, "1");
+
+        BidayatulHidayahLB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BidayatulHidayahLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/foto/bidayatul hidayah.jpg"))); // NOI18N
+        ImagePanel.add(BidayatulHidayahLB, "2");
+
+        InsectCrisisLB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        InsectCrisisLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/foto/insectcrisis.jpg"))); // NOI18N
+        ImagePanel.add(InsectCrisisLB, "3");
+
+        getContentPane().add(ImagePanel, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     private void JavaEE6BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JavaEE6BTNActionPerformed
         // TODO add your handling code here:
@@ -140,7 +117,7 @@ public class PenampilGambarBTN extends javax.swing.JFrame {
 
     private void JavaScriptBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JavaScriptBTNActionPerformed
         // TODO add your handling code here:
-         CardLayout cl = (CardLayout) (ImagePanel.getLayout());
+        CardLayout cl = (CardLayout) (ImagePanel.getLayout());
         cl.show(ImagePanel, "1");
     }//GEN-LAST:event_JavaScriptBTNActionPerformed
 
@@ -155,11 +132,6 @@ public class PenampilGambarBTN extends javax.swing.JFrame {
         CardLayout cl = (CardLayout) (ImagePanel.getLayout());
         cl.show(ImagePanel, "3");
     }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-        dispose();
-    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -198,6 +170,7 @@ public class PenampilGambarBTN extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BidayatulHidayahLB;
+    private javax.swing.JPanel ButtonPanel;
     private javax.swing.JPanel ImagePanel;
     private javax.swing.JLabel InsectCrisisLB;
     private javax.swing.JButton JavaEE6BTN;
