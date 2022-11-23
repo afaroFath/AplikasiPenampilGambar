@@ -5,6 +5,8 @@
  */
 package AplikasiPenampilGambarGUICMBO;
 
+import java.awt.CardLayout;
+
 /**
  *
  * @author achma
@@ -27,31 +29,89 @@ public class PenampilanGambarCMBO extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel1 = new javax.swing.JLabel();
+        ComboBoxGambar = new javax.swing.JComboBox<>();
+        ImagePanel = new javax.swing.JPanel();
+        JavaEE6LB = new javax.swing.JLabel();
+        JavaScriptLB = new javax.swing.JLabel();
+        BidayatulHidayahLB = new javax.swing.JLabel();
+        InsectCrisisLB = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jLabel1.setText("Pilih Gambar :");
+
+        ComboBoxGambar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "JavaEE 6", "Java Script", "Bidayatul Hidayah", "Insect Crisis" }));
+        ComboBoxGambar.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                ComboBoxGambarItemStateChanged(evt);
+            }
+        });
+        ComboBoxGambar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ComboBoxGambarActionPerformed(evt);
+            }
+        });
+
+        ImagePanel.setLayout(new java.awt.CardLayout());
+
+        JavaEE6LB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        JavaEE6LB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/foto/javaee.jpg"))); // NOI18N
+        ImagePanel.add(JavaEE6LB, "0");
+
+        JavaScriptLB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        JavaScriptLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/foto/foto javascript.jpg"))); // NOI18N
+        ImagePanel.add(JavaScriptLB, "1");
+
+        BidayatulHidayahLB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BidayatulHidayahLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/foto/bidayatul hidayah.jpg"))); // NOI18N
+        ImagePanel.add(BidayatulHidayahLB, "2");
+
+        InsectCrisisLB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        InsectCrisisLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/foto/insectcrisis.jpg"))); // NOI18N
+        ImagePanel.add(InsectCrisisLB, "3");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(151, 151, 151)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(193, Short.MAX_VALUE))
+                .addGap(249, 249, 249)
+                .addComponent(jLabel1)
+                .addGap(31, 31, 31)
+                .addComponent(ComboBoxGambar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(305, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addComponent(ImagePanel, javax.swing.GroupLayout.PREFERRED_SIZE, 741, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 20, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(269, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ComboBoxGambar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addContainerGap(556, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGap(0, 76, Short.MAX_VALUE)
+                    .addComponent(ImagePanel, javax.swing.GroupLayout.PREFERRED_SIZE, 511, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ComboBoxGambarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboBoxGambarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ComboBoxGambarActionPerformed
+
+    private void ComboBoxGambarItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_ComboBoxGambarItemStateChanged
+        // TODO add your handling code here:
+        CardLayout cl = (CardLayout) (ImagePanel.getLayout());
+        cl.show(ImagePanel, String.valueOf(ComboBoxGambar.getSelectedIndex()));
+    }//GEN-LAST:event_ComboBoxGambarItemStateChanged
 
     /**
      * @param args the command line arguments
@@ -89,6 +149,12 @@ public class PenampilanGambarCMBO extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel BidayatulHidayahLB;
+    private javax.swing.JComboBox<String> ComboBoxGambar;
+    private javax.swing.JPanel ImagePanel;
+    private javax.swing.JLabel InsectCrisisLB;
+    private javax.swing.JLabel JavaEE6LB;
+    private javax.swing.JLabel JavaScriptLB;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
